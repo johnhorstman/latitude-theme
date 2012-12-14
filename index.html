@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Name of yur theme -->
+	<title>Latitude Software Populr Theme</title>
+
+	<!-- Add any styles your theme requires here -->
+	<link rel="stylesheet/less" type="text/css" href="/latitude/styles/main.less">
+	<link rel="stylesheet/less" type="text/css" href="/latitude/styles/lightbox/lightbox.css">
+
+	<!-- This script loads the Populr theming engine. Populr will automatically
+	remove it at runtime. -->
+	<script src="http://populr.me/assets/developers/themer.js"></script>
+
+	<!-- Add any javscript your theme requires here -->
+	<script src="/latitude/js/main.js"></script>
+</head>
+<body>
+
+	<script id="theme" type="text/x-handlebars-template">
+
+		<header>
+			<div class="container">
+				<div class="branding clearfix">
+					<h1 class="pull-left">Latitude Software</h1>
+					<h2 class="pull-right">with support by the expanse group</h2>
+				</div>
+			</div>
+		</header>
+
+		<div data-role="main" class="container">
+
+			<!-- Title -->
+			<div class="pop-title-wrapper">
+				<div class="pop-tile">
+					{{{title}}}
+				</div>
+			</div>
+
+			<!-- Content -->
+			<div class="row">
+
+				<!-- Region: Columnizer -->
+				<div class="span4">
+					<div class="pop-tile">
+						{{#region "columnizer" id="top-column-region" max_cols="1" dummy_content="I-2|T-1|D-4" max_auto_assets="1"}}
+							{{#asset "text" size="1"}}
+								{{{title}}}
+								<div class="content">
+									{{{body}}}
+								</div>
+							{{/asset}}
+
+							{{#asset "imagegroup" size="1"}}
+								{{{title}}}
+								<div class="content{{#if_many images}} imagegroup{{/if_many}}">
+								{{#if_many images}}
+									{{#images}}
+										<a href="{{{original_url}}}" rel="lightbox">
+											<img class="img-polaroid" src="{{{resize original_url width="128" height="0"}}}" alt="" />
+										</a>
+									{{/images}}
+								{{else}}
+									<a href="{{{original_url}}}" rel="lightbox">
+										<img class="img-polaroid" src="{{{resize original_url width="270" height="0"}}}" alt="" />
+									</a>
+								{{/if_many}}
+								</div>
+								<blockquote>
+									{{{description}}}
+								</blockquote>
+							{{/asset}}
+
+							{{#asset "documentgroup" size="1"}}
+								{{{title}}}
+								<div class="content">
+									<ul class="documents">
+									{{#documents}}
+										<li><a href="{{original_url}}">{{title}}</a></li>
+									{{/documents}}
+									</ul>
+								</div>
+								<blockquote>
+									{{{description}}}
+								</blockquote>
+							{{/asset}}
+
+							{{#asset "videogroup" size="1"}}
+								{{{title}}}
+								<div class="content">
+									{{{videoplayer contents width="278" height="180" resolution="small"}}}
+								</div>
+								<blockquote>
+									{{{description}}}
+								</blockquote>
+							{{/asset}}
+
+							{{#asset "embedgroup" size="1" width="270"}}
+								{{{title}}}
+								<div class="content">
+								{{#embeds}}
+									<div class="embed">{{{html}}}</div>
+								{{/embeds}}
+								</div>
+								<blockquote>
+									{{{description}}}
+								</blockquote>
+							{{/asset}}
+						{{/region}}
+					</div>
+
+					<div class="pop-tile">
+						{{#region "columnizer" id="bottom-column-region" max_cols="1" dummy_content="V-3|E-1" max_auto_assets="1"}}
+							{{#asset "text" size="1"}}
+								{{{title}}}
+								<div class="content">
+									{{{body}}}
+								</div>
+							{{/asset}}
+
+							{{#asset "imagegroup" size="1"}}
+								{{{title}}}
+								<div class="content{{#if_many images}} imagegroup{{/if_many}}">
+								{{#if_many images}}
+									{{#images}}
+										<a href="{{{original_url}}}" rel="lightbox">
+											<img class="img-polaroid" src="{{{resize original_url width="128" height="0"}}}" alt="" />
+										</a>
+									{{/images}}
+								{{else}}
+									<a href="{{{original_url}}}" rel="lightbox">
+										<img class="img-polaroid" src="{{{resize original_url width="270" height="0"}}}" alt="" />
+									</a>
+								{{/if_many}}
+								</div>
+								<blockquote>
+									{{{description}}}
+								</blockquote>
+							{{/asset}}
+
+							{{#asset "documentgroup" size="1"}}
+								{{{title}}}
+								<div class="content">
+									<ul class="documents">
+									{{#documents}}
+										<li><a href="{{original_url}}">{{title}}</a></li>
+									{{/documents}}
+									</ul>
+								</div>
+								<blockquote>
+									{{{description}}}
+								</blockquote>
+							{{/asset}}
+
+							{{#asset "videogroup" size="1"}}
+								{{{title}}}
+								<div class="content">
+									{{{videoplayer contents width="278" height="180" resolution="small"}}}
+								</div>
+								<blockquote>
+									{{{description}}}
+								</blockquote>
+							{{/asset}}
+
+							{{#asset "embedgroup" size="1" width="270"}}
+								{{{title}}}
+								<div class="content">
+								{{#embeds}}
+									<div class="embed">{{{html}}}</div>
+								{{/embeds}}
+								</div>
+								<blockquote>
+									{{{description}}}
+								</blockquote>
+							{{/asset}}
+						{{/region}}
+					</div>
+				</div>
+
+				<!-- Region: Packer -->
+				<div class="span8">
+					<div class="pop-tile">
+						{{#region "packer" id="main-region" columns="3" column_width="170" gutter_width="30" dummy_content="T-1-l,T-1-m,I-4-m,I-1-m,I-3-l,D-4-l,T-1-m,D-6-m" max_auto_assets="0" sizes="m,l" default_size="m"}}
+							{{#asset "text" size="m"}}
+								{{{title}}}
+								<div class="content">
+									{{{body}}}
+								</div>
+							{{/asset}}
+
+							{{#asset "text" size="l"}}
+								<div class="well">
+									{{{title}}}
+									<div class="content lead">
+										{{{body}}}
+									</div>
+								</div>
+							{{/asset}}
+
+							{{#asset "documentgroup" size="m"}}
+								{{{title}}}
+								<div class="content">
+									<ul class="documents">
+									{{#documents}}
+										<li><a href="{{original_url}}">{{title}}</a></li>
+									{{/documents}}
+									</ul>
+								</div>
+								<blockquote>
+									{{{description}}}
+								</blockquote>
+							{{/asset}}
+
+							{{#asset "documentgroup" size="l"}}
+								{{{title}}}
+								<div class="content">
+									<ul class="documents nav nav-tabs nav-stacked">
+									{{#documents}}
+										<li><a href="{{original_url}}">{{title}}</a></li>
+									{{/documents}}
+									</ul>
+								</div>
+								<blockquote>
+									{{{description}}}
+								</blockquote>
+							{{/asset}}
+
+							{{#asset "embedgroup" size="m" width="180"}}
+								{{{title}}}
+								<div class="content">
+								{{#embeds}}
+									<div class="embed">{{{html}}}</div>
+								{{/embeds}}
+								</div>
+								<blockquote>
+									{{{description}}}
+								</blockquote>
+							{{/asset}}
+
+							{{#asset "embedgroup" size="l" width="600"}}
+								{{{title}}}
+								<div class="content">
+								{{#embeds}}
+									<div class="embed">{{{html}}}</div>
+								{{/embeds}}
+								</div>
+								<blockquote>
+									{{{description}}}
+								</blockquote>
+							{{/asset}}
+
+							{{#asset "imagegroup" size="m"}}
+								{{{title}}}
+								<div class="content{{#if_many images}} imagegroup{{/if_many}}">
+								{{#if_many images}}
+									{{#images}}
+										<a href="{{{original_url}}}" rel="lightbox">
+											<img class="img-polaroid" src="{{{resize original_url width="130" height="0"}}}" alt="" />
+										</a>
+									{{/images}}
+								{{else}}
+									<a href="{{{original_url}}}" rel="lightbox">
+										<img class="img-polaroid" src="{{{resize original_url width="275" height="0"}}}" alt="" />
+									</a>
+								{{/if_many}}
+								</div>
+								<blockquote>
+									{{{description}}}
+								</blockquote>
+							{{/asset}}
+
+							{{#asset "imagegroup" size="l"}}
+								{{{title}}}
+								<div class="content imageslider">
+									{{{imageslider contents width="600" height="480"}}}
+								</div>
+								<blockquote>
+									{{{description}}}
+								</blockquote>
+							{{/asset}}
+						{{/region}}
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<footer>
+			<div class="container">
+				<p class="copyright">&copy; 2012 Latitude Software</p>
+				<ul class="links">
+					<li><a href="#">link</a></li>
+					<li><a href="#">link</a></li>
+					<li><a href="#">link</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</script>
+
+</body>
+</html>
