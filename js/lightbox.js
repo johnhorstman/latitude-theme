@@ -342,7 +342,7 @@ lightbox = new Lightbox options
 
   })();
 
-  $(function() {
+  $(document).on('pop-initialized', function() {
     var lightbox, options;
     options = new LightboxOptions;
     return lightbox = new Lightbox(options);

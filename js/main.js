@@ -19,9 +19,9 @@ ImageLightbox = function() {
 		generate_id.call( $(this) );
 	}
 	function init() {
-		$.getScript(SCRIPT, function() {
+		// $.getScript(SCRIPT, function() {
 			$(SELECTOR).each(handle_imagegroup);
-		});
+		// });
 	}
 
 	// constructor
