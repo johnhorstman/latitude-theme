@@ -49,7 +49,7 @@ lightbox = new Lightbox options
 
     function LightboxOptions() {
       this.fileLoadingImage = ''; // this is stupid... doing with css
-      this.fileCloseImage = 'styles/lightbox/close.png';
+      this.fileCloseImage = '/styles/lightbox/close.png';
       this.resizeDuration = 700;
       this.fadeDuration = 500;
       this.labelImage = "Image";
