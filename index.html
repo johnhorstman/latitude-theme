@@ -46,7 +46,7 @@
 				<!-- Region: Columnizer -->
 				<div class="span4">
 					<div class="pop-tile">
-						{{#region "columnizer" id="top-column-region" max_cols="1" dummy_content="I-2|T-1|D-4" max_auto_assets="1"}}
+						{{#region "columnizer" id="top-column-region" max_cols="1" dummy_content="I-2|I-1|T-1|D-4" max_auto_assets="1"}}
 							{{#asset "text" size="1"}}
 								{{{title}}}
 								<div class="content">
@@ -64,9 +64,11 @@
 										</a>
 									{{/images}}
 								{{else}}
-									<a href="{{{original_url}}}" rel="lightbox">
-										<img class="img-polaroid" src="{{{resize original_url width="270" height="0"}}}" alt="" />
-									</a>
+									{{#images}}
+										<a href="{{{original_url}}}" rel="lightbox">
+											<img class="img-polaroid" src="{{{resize original_url width="270" height="0"}}}" alt="" />
+										</a>
+									{{/images}}
 								{{/if_many}}
 								</div>
 								<blockquote>
