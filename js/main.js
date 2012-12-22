@@ -4,7 +4,7 @@ var ImageLightbox;
 
 ImageLightbox = function() {
 	var _globalCounter = 0,
-		SCRIPT   = "js/lightbox.js",
+		SCRIPT   = "/js/lightbox.js",
 		SELECTOR = ".asset-type-imagegroup .content:not(.imageslider)";
 
 	function generate_id() {
