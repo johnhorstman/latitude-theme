@@ -30,6 +30,7 @@ ImageLightbox = function() {
 }();
 
 function init () {
+	alert('pop script has loaded.');
 	ImageLightbox();
 }
 
