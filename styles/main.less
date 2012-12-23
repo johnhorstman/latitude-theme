@@ -11,6 +11,9 @@ body {
 
 html .themed {
 
+	.text-left  { text-align: left;  }
+	.text-right { text-align: right; }
+
 	&#pop {
 
 		/* template header */
@@ -35,6 +38,7 @@ html .themed {
 					h1, h2 {
 						height: 54px;
 						text-indent: -999999px;
+						background-image: url("@{base-url}/images/ui-branding.jpg");
 						background-repeat: no-repeat;
 					}
 					h1 {
@@ -57,14 +61,6 @@ html .themed {
 
 			margin-top: @gridGutterWidth * 2;
 			color: @white;
-
-			.copyright {
-				.pull-left;
-			}
-			.links {
-				.pull-right;
-				.clearfix;
-			}
 
 			ul {
 				margin: 0;
@@ -191,6 +187,4 @@ html .themed {
 			margin-bottom: 3px;
 		}
 	}
-
-	// Add your selectors and styles here
 }

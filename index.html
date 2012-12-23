@@ -297,12 +297,26 @@
 
 		<footer>
 			<div class="container">
-				<p class="copyright">&copy; 2012 Latitude Software</p>
-				<ul class="links">
-					<li><a href="#">link</a></li>
-					<li><a href="#">link</a></li>
-					<li><a href="#">link</a></li>
-				</ul>
+				<div class="row">
+					<div class="span6">
+						{{#region "columnizer" id="footer-left" max_cols="1" dummy_content="T-1" max_auto_assets="1"}}
+							{{#asset "text" size="1"}}
+								<div class="content">
+									{{{body}}}
+								</div>
+							{{/asset}}
+						{{/region}}
+					</div>
+					<div class="span6 text-right">
+						{{#region "columnizer" id="footer-right" max_cols="1" dummy_content="T-1" max_auto_assets="1"}}
+							{{#asset "text" size="1"}}
+								<div class="content">
+									{{{body}}}
+								</div>
+							{{/asset}}
+						{{/region}}
+					</div>
+				</div>
 			</div>
 		</footer>
 
