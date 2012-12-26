@@ -1,28 +1,14 @@
 @import "variables.less";
-
-// CSS Reset
 @import "reset.less";
-
-// Core variables and mixins
 @import "core.less";
 @import "mixins.less";
-
-// Grid system and page structure
 @import "scaffolding.less";
 @import "grid.less";
 @import "layouts.less";
-
-// Base CSS
 @import "type.less";
-
-// Components: common
 @import "sprites.less";
 @import "wells.less";
-
-// Components: Nav
 @import "navs.less";
-
-// Utility classes
 @import "utilities.less";
 
 // Your entire stylesheet should be nested in the "html .themed" selector. This
@@ -32,10 +18,6 @@
 // here as well. It's not a great solution, but at least it works!
 body {
 	background: @background-color;
-}
-body:before {
-	content: "@{base-url} | @{background-color} | @{gridGutterWidth} | @{gray} | @{grayLight}";
-	background: white;
 }
 
 html .themed {
