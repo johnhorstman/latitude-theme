@@ -9,6 +9,11 @@ body {
 	background: @background-color;
 }
 
+body:before {
+	content: "@{base-url}";
+	background: #fff;
+}
+
 html .themed {
 
 	.text-left  { text-align: left;  }
