@@ -9,6 +9,10 @@
 body {
 	background: @background-color;
 }
+body:before {
+	content: "@{base-url} | @{background-color} | @{gridGutterWidth} | @{gray} | @{grayLight}";
+	background: white;
+}
 
 html .themed {
 
