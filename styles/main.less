@@ -9,11 +9,6 @@ body {
 	background: @background-color;
 }
 
-body:before {
-	content: "@{base-url}";
-	background: #fff;
-}
-
 html .themed {
 
 	.text-left  { text-align: left;  }
@@ -43,8 +38,7 @@ html .themed {
 					h1, h2 {
 						height: 54px;
 						text-indent: -999999px;
-						background-image: url("@{base-url}/images/ui-branding.jpg");
-						background-repeat: no-repeat;
+						background: url("@{base-url}/images/ui-branding.jpg") no-repeat 0 0;
 					}
 					h1 {
 						width: 449px;

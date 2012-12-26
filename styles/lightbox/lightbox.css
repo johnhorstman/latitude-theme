@@ -174,8 +174,12 @@
   float: right;
   padding-bottom: 0.7em;
   outline: none;
+  background: url(close.png) no-repeat;
 }
 /* line 117, ../sass/lightbox.sass */
 .lb-data .lb-close:hover {
   cursor: pointer;
+}
+.lb-data .lb-close img {
+  visibility: hidden;
 }
